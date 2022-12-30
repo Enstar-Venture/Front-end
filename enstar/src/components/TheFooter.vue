@@ -21,12 +21,25 @@
         </div>
       </div>
     </div>
+    <div class="q-pa-lg row justify-between">
+      <div class="q-pt-sm q-gutter-md items-center">
+        <q-icon name="fa-brands fa-twitter" size="sm"/>
+        <q-icon name="fa-brands fa-telegram" size="sm"/>
+        <q-icon name="fa-brands fa-discord" size="sm"/>
+        <q-icon name="fa-brands fa-instagram" size="sm"/>
+        <q-icon name="fa-brands fa-youtube" size="sm"/>
+        <q-icon name="fa-brands fa-linkedin" size="sm"/>
+        <q-icon name="fa-brands fa-github" size="sm"/>
+      </div>
+      <div class="text-right">
+        <q-btn label="Buy Star"/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-
 const footerLinks = [
   {
     label: "Company",
@@ -85,7 +98,7 @@ export default defineComponent({
   name: "TheFooter",
   setup () {
     return {
-      footerLinks
+      footerLinks,
     }
   }
 })
