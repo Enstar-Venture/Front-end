@@ -5,19 +5,26 @@
 
       <q-toolbar>
         <div class="q-mr-lg q-pt-sm">
-          <img alt="logo" src="LOGO2.jpg" height="50">
+          <img alt="logo" src="enstar_logo.png" height="50">
         </div>
         <div class="q-px-md">
-          <q-btn label="Projects" to="projects"/>
+          <q-btn label="Projects" to="projects" />
         </div>
         <div class="q-px-md">
-          <q-btn label="Your Wallet" to="wallet"/>
+          <q-btn label="Your Wallet" to="wallet" />
         </div>
 
-        <q-toolbar-title/>
+        <q-toolbar-title />
+
+        <q-input dark borderless v-model="text" input-class="text-right" class="q-ml-md">
+          <template v-slot:append>
+            <q-icon v-if="text === ''" name="search" />
+            <q-icon v-else name="clear" class="cursor-pointer" @click="text = ''" />
+          </template>
+        </q-input>
 
         <div class="q-px-md">
-          <q-btn label="Connect Wallet" @click="connect"/>
+          <q-btn label="Connect Wallet" @click="connect" />
         </div>
 
       </q-toolbar>
@@ -33,7 +40,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import  TheFooter  from 'components/TheFooter.vue'
+import TheFooter from 'components/TheFooter.vue'
 
 export default defineComponent({
   name: 'MainLayout',
@@ -42,8 +49,9 @@ export default defineComponent({
     TheFooter
   },
 
-  setup () {
+  setup() {
     return {
+      text: ref(''),
       connect() {
         console.log("connect wallet")
       }
