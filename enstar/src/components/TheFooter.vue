@@ -14,7 +14,7 @@
       </template>
       <div class="col-3 column items-end">
         <div class="q-mr-lg q-pt-sm">
-          <img alt="logo" src="LOGO2.jpg" height="50">
+          <img alt="logo" src="enstar_logo.png" height="50">
         </div>
         <div class="text-h6">
           Slogan Slogan Slogan
